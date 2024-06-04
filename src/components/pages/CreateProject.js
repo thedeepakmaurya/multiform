@@ -36,7 +36,7 @@ const CreateProject = () => {
           </div>
           <div className='flex flex-col mt-5'>
             <label className=' text-md font-medium'>Notes</label>
-            <textarea className='border border-gray-300 rounded-md text-sm outline-none overflow-y-hidden focus:border-blue-500 p-2 mt-2 w-full h-20' type='text' name='name' placeholder='Optional' />
+            <textarea className='border border-gray-300 rounded-md text-sm outline-none overflow-y-hidden focus:border-blue-500 p-2 mt-2 w-full h-24' type='text' name='name' placeholder='Optional' />
           </div>
         </div>
       </form>
