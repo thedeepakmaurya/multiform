@@ -7,21 +7,19 @@ import Team from './pages/Team'
 const Form = () => {
 
   const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState(
-    {
-      projectName: " ",
-      note: " ",
-      person: " ",
-
-    }
+  const [formData, setFormData] = useState(() => {
+    const savedFormData = localStorage.getItem('formData');
+    return savedFormData ? JSON.parse(savedFormData) : { projectName: "", note: "", person: "" };
+  }
   )
 
   const handleChange = (e) => {
-      setFormData({...formData, [e.target.name]: e.target.value })
-    }
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
 
   const handleSubmit = () => {
     console.log(formData)
+    localStorage.setItem('formData', JSON.stringify(formData));
   }
 
   const nextStep = () => {
@@ -35,13 +33,13 @@ const Form = () => {
 
   switch (step) {
     case 1:
-      return <CreateProject formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} step={step} handleChange={handleChange}/>;
+      return <CreateProject formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} step={step} handleChange={handleChange} />;
     case 2:
-      return <SelectView formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} step={step} handleChange={handleChange}/>;
+      return <SelectView formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} step={step} handleChange={handleChange} />;
     case 3:
-      return <ManageProject formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} step={step} handleChange={handleChange}/>;
+      return <ManageProject formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} step={step} handleChange={handleChange} />;
     case 4:
-      return <Team formData={formData} setFormData={setFormData} prevStep={prevStep} step={step} handleChange={handleChange} handleSubmit={handleSubmit}/>;
+      return <Team formData={formData} setFormData={setFormData} prevStep={prevStep} step={step} handleChange={handleChange} handleSubmit={handleSubmit} />;
     default:
       return <CreateProject formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} step={step} handleChange={handleChange} />
 
