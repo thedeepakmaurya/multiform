@@ -19,7 +19,7 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     fontFamily: {
-      'monsterrat': ['"Montserrat", sans-serif'],
+      'barlow': ['"Barlow", sans-serif'],
     },
     extend: {},
   },
