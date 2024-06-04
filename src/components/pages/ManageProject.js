@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../Button'
 
-const ManageProject = ({nextStep, prevStep}) => {
+const ManageProject = ({formData, setFormData, step, nextStep, prevStep}) => {
   return (
     <div className='flex flex-col items-center  bg-white rounded-xl p-10 shadow-lg shadow-gray-400 w-[480px] h-[600px]'>
       <h1 className='font-bold text-xl'>Who can manage projects</h1>
@@ -34,7 +34,7 @@ const ManageProject = ({nextStep, prevStep}) => {
           </div>
         </div>
       </div>
-      <Button nextStep={nextStep} prevStep={prevStep}/>
+      <Button nextStep={nextStep} prevStep={prevStep}step={step}/>
     </div>
   )
 }

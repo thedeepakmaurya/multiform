@@ -9,9 +9,20 @@ const Form = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState(
     {
-      
+      projectName: " ",
+      note: " ",
+      person: " ",
+
     }
   )
+
+  const handleChange = (e) => {
+      setFormData({...formData, [e.target.name]: e.target.value })
+    }
+
+  const handleSubmit = () => {
+    console.log(formData)
+  }
 
   const nextStep = () => {
     setStep(step + 1);
@@ -24,27 +35,18 @@ const Form = () => {
 
   switch (step) {
     case 1:
-      return <CreateProject nextStep={nextStep} prevStep={prevStep} />;
+      return <CreateProject formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} step={step} handleChange={handleChange}/>;
     case 2:
-      return <SelectView nextStep={nextStep} prevStep={prevStep} />;
+      return <SelectView formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} step={step} handleChange={handleChange}/>;
     case 3:
-      return <ManageProject nextStep={nextStep} prevStep={prevStep} />;
+      return <ManageProject formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} step={step} handleChange={handleChange}/>;
     case 4:
-      return <Team prevStep={prevStep} />;
+      return <Team formData={formData} setFormData={setFormData} prevStep={prevStep} step={step} handleChange={handleChange} handleSubmit={handleSubmit}/>;
     default:
-      return <CreateProject nextStep={nextStep} prevStep={prevStep} />
+      return <CreateProject formData={formData} setFormData={setFormData} nextStep={nextStep} prevStep={prevStep} step={step} handleChange={handleChange} />
 
   }
 
-  // return (
-  //   <div className='flex flex-col items-center  bg-white rounded-xl p-10 shadow-lg shadow-gray-400 w-[480px] h-[600px]'>
-  //     {/* <CreateProject /> */}
-  //     {/* <SelectView /> */}
-  //     {/* <ManageProject /> */}
-  //     {/* <Team/> */}
-  //     <Button />
-  //   </div>
-  // )
 }
 
 export default Form

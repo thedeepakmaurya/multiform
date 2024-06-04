@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../Button'
 
-const CreateProject = ({nextStep, prevStep}) => {
+const CreateProject = ({formData, setFormData, step, nextStep, prevStep, handleChange}) => {
 
   const options = [
     { value: 'Virat', label: 'Virat' },
@@ -15,7 +15,7 @@ const CreateProject = ({nextStep, prevStep}) => {
       <form className='w-full'>
         <div className='flex flex-col'>
           <label className=' text-md font-medium'>Project name</label>
-          <input className='border border-gray-300 rounded-md text-sm  outline-none focus:border-blue-500 h-9 pl-2 pr-2 mt-2 w-full' type='text' name='name' placeholder='Enter project name here' />
+          <input className='border border-gray-300 rounded-md text-sm  outline-none focus:border-blue-500 h-9 pl-2 pr-2 mt-2 w-full' type='text' name='projectName' value={formData.projectName} placeholder='Enter project name here' onChange={handleChange}/>
         </div>
         <div className='flex flex-col mt-5'>
           <label className=' text-md font-medium '>Client</label>
@@ -37,11 +37,11 @@ const CreateProject = ({nextStep, prevStep}) => {
           </div>
           <div className='flex flex-col mt-5'>
             <label className=' text-md font-medium'>Notes</label>
-            <textarea className='border border-gray-300 rounded-md text-sm outline-none overflow-y-hidden focus:border-blue-500 p-2 mt-2 w-full h-24' type='text' name='name' placeholder='Optional' />
+            <textarea className='border border-gray-300 rounded-md text-sm outline-none overflow-y-hidden focus:border-blue-500 p-2 mt-2 w-full h-24' type='text' name='note' value={formData.note} placeholder='Optional' />
           </div>
         </div>
       </form>
-      <Button nextStep={nextStep} prevStep={prevStep}/>
+      <Button step={step} nextStep={nextStep} prevStep={prevStep}/>
     </div>
   )
 }
