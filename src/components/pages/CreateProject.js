@@ -1,6 +1,7 @@
 import React from 'react'
+import Button from '../Button'
 
-const CreateProject = () => {
+const CreateProject = ({nextStep, prevStep}) => {
 
   const options = [
     { value: 'Virat', label: 'Virat' },
@@ -9,7 +10,7 @@ const CreateProject = () => {
   ]
 
   return (
-    <>
+    <div className='flex flex-col items-center  bg-white rounded-xl p-10 shadow-lg shadow-gray-400 w-[480px] h-[600px]'>
       <h1 className='font-bold pb-5 text-xl'>Create a project</h1>
       <form className='w-full'>
         <div className='flex flex-col'>
@@ -40,7 +41,8 @@ const CreateProject = () => {
           </div>
         </div>
       </form>
-    </>
+      <Button nextStep={nextStep} prevStop={prevStep}/>
+    </div>
   )
 }
 
