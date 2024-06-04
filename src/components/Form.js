@@ -7,6 +7,11 @@ import Team from './pages/Team'
 const Form = () => {
 
   const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState(
+    {
+      
+    }
+  )
 
   const nextStep = () => {
     setStep(step + 1);
@@ -27,7 +32,7 @@ const Form = () => {
     case 4:
       return <Team prevStep={prevStep} />;
     default:
-      return <div>Error: Unknown step</div>
+      return <CreateProject nextStep={nextStep} prevStep={prevStep} />
 
   }
 
