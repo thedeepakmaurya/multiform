@@ -31,8 +31,8 @@ const CreateProject = ({formData, setFormData, step, nextStep, prevStep, handleC
           <div className='flex flex-col mt-5'>
             <label className=' text-md font-medium'>Dates</label>
             <div className='flex gap-4'>
-              <input className='border border-gray-300 rounded-md text-sm  outline-none focus:border-blue-500 h-9 pl-2 pr-2 mt-2 w-1/2' type='date' name='date' />
-              <input className='border border-gray-300 rounded-md text-sm  outline-none focus:border-blue-500 h-9 pl-2 pr-2 mt-2 w-1/2' type='date' name='date' />
+              <input className='border border-gray-300 rounded-md text-sm  outline-none focus:border-blue-500 h-9 pl-2 pr-2 mt-2 w-1/2' type='date' name='startDate' value={formData.startDate} onChange={handleChange}/>
+              <input className='border border-gray-300 rounded-md text-sm  outline-none focus:border-blue-500 h-9 pl-2 pr-2 mt-2 w-1/2' type='date' name='endDate' value={formData.endDate} onChange={handleChange}/>
             </div>
           </div>
           <div className='flex flex-col mt-5'>
