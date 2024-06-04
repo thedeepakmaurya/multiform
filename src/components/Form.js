@@ -8,9 +8,9 @@ import Team from './pages/Team'
 const Form = () => {
   return (
     <div className='flex flex-col items-center  bg-white rounded-xl p-10 shadow-lg shadow-gray-400 w-[480px] h-[600px]'>
-      <CreateProject />
+      {/* <CreateProject /> */}
       {/* <SelectView /> */}
-      {/* <ManageProject /> */}
+      <ManageProject />
       {/* <Team/> */}
       <Button />
     </div>
