@@ -13,21 +13,21 @@ const Form = () => {
   }
 
   const prevStep = () => {
-    setStep(step - 1);
+    setStep(step - 1)
   }
 
 
   switch (step) {
     case 1:
-      return <CreateProject nextStep={nextStep} prevStop={prevStep}/>;
+      return <CreateProject nextStep={nextStep} prevStep={prevStep} />;
     case 2:
-      return <SelectView nextStep={nextStep} prevStop={prevStep} />;
+      return <SelectView nextStep={nextStep} prevStep={prevStep} />;
     case 3:
-      return <ManageProject nextStep={nextStep} prevStop={prevStep}/>;
+      return <ManageProject nextStep={nextStep} prevStep={prevStep} />;
     case 4:
-      return <Team prevStop={prevStep} />;
+      return <Team prevStep={prevStep} />;
     default:
-      return 
+      return <div>Error: Unknown step</div>
 
   }
 

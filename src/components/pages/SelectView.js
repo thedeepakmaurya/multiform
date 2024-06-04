@@ -14,7 +14,7 @@ const SelectView = ({nextStep, prevStep}) => {
           <i className='bx bxs-dashboard bx-lg' ></i>
         </div>
       </div>
-      <Button nextStep={nextStep} prevStop={prevStep}/>
+      <Button nextStep={nextStep} prevStep={prevStep}/>
     </div>
   )
 }

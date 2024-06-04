@@ -41,7 +41,7 @@ const CreateProject = ({nextStep, prevStep}) => {
           </div>
         </div>
       </form>
-      <Button nextStep={nextStep} prevStop={prevStep}/>
+      <Button nextStep={nextStep} prevStep={prevStep}/>
     </div>
   )
 }
