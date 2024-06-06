@@ -15,7 +15,7 @@ const CreateProject = ({ formData, setFormData, step, nextStep, prevStep, handle
   };
 
   return (
-    <div className='flex flex-col items-center  bg-white rounded-xl p-10 shadow-lg shadow-gray-400 sm:w-[380px] w-[480px] h-[600px]'>
+    <div className='flex flex-col items-center  bg-white rounded-xl p-10 shadow-lg shadow-gray-400 sm:w-[90%] w-[31%] h-[600px]'>
       <h1 className='font-bold pb-5 text-xl'>Create a project</h1>
       <form className='w-full'>
         <div className='flex flex-col'>

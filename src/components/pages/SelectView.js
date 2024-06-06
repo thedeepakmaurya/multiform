@@ -14,7 +14,7 @@ const SelectView = ({ formData, setFormData, step, nextStep, prevStep }) => {
   };
 
   return (
-    <div className='flex flex-col items-center bg-white rounded-xl p-10 shadow-lg shadow-gray-400 sm:w-[380px] w-[480px] h-[600px]'>
+    <div className='flex flex-col items-center bg-white rounded-xl p-10 shadow-lg shadow-gray-400 sm:w-[90%] w-[31%] h-[600px]'>
       <h1 className='font-bold text-xl'>Select a view</h1>
       <p className='text-sm'>You can also customize this view in settings</p>
       <div className='flex w-full gap-9 mt-8'>
