@@ -22,7 +22,7 @@ const Team = ({formData, setFormData, step, prevStep, handleSubmit, handleChange
       </div>
       <div className='mt-5'>
          {
-          teamMembers.map((member, index) => <div key={index} className='flex flex-col w-[480px] pl-10 pr-10 mb-2'>
+          teamMembers.map((member, index) => <div key={index} className='flex flex-col sm:w-[380px] w-[480px] pl-10 pr-10 mb-2'>
                   <div className='flex items-center gap-[340px]'>
                   <p className='text-sm font-semibold'>{member}</p> 
                   <i className='bx bx-x'></i>
