@@ -34,7 +34,7 @@ const ManageProject = ({formData, setFormData, step, nextStep, prevStep}) => {
           </div>
         </div>
       </div>
-      <div className='mt-[103px]'>
+      <div className='mt-[103px] sm:mt-[82px]'>
       <Button nextStep={nextStep} prevStep={prevStep}step={step}/>
       </div>
     </div>
