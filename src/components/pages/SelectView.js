@@ -2,15 +2,11 @@ import React, { useState } from 'react'
 import Button from '../Button'
 
 const SelectView = ({ formData, setFormData, step, nextStep, prevStep }) => {
-  const [selectedView, setSelectedView] = useState(() => {
-    const savedView = localStorage.getItem('selectedView');
-    return savedView ? savedView : '';
-  });
+  const [selectedView, setSelectedView] = useState(formData.view || '');
 
   const handleSelectView = (view) => {
     setSelectedView(view);
     setFormData({ ...formData, view: view });
-    localStorage.setItem('selectedView', view);
   };
 
   return (

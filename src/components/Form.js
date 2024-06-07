@@ -9,7 +9,7 @@ const Form = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState(() => {
     const savedFormData = localStorage.getItem('formData');
-    return savedFormData ? JSON.parse(savedFormData) : { projectName: "", note: "", person: "", startDate: " ", endDate: " ", client: " ", view: " " };
+    return savedFormData ? JSON.parse(savedFormData) : { projectName: "", note: "", person: "", startDate: " ", endDate: " ", client: " ", view: " ", selectedOption: " " };
   }
   )
 
