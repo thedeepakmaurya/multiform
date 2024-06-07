@@ -8,8 +8,9 @@ const CreateProject = ({ formData, setFormData, step, nextStep, prevStep, handle
   const [newClient, setNewClient] = useState('');
 
   const handleAddClient = () => {
-    if (newClient.trim()) {
+    if (newClient) {
       setOptions([...options, { value: newClient, label: newClient }]);
+      setFormData({...formData, client: newClient})
       setNewClient('');
     }
   };

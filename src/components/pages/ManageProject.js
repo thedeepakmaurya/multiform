@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Button from '../Button'
 
 const ManageProject = ({ formData, setFormData, step, nextStep, prevStep }) => {
-  const [selectedOption, setSelectedOption] = useState(localStorage.getItem(formData.selectedOption) || '')
+  const [selectedOption, setSelectedOption] = useState(formData.selectedOption || '')
 
   const handleOptionClick = (option) => {
     setSelectedOption(option)

@@ -4,9 +4,9 @@ const Team = ({formData, setFormData, step, prevStep, handleSubmit, handleChange
   const [teamMembers, setTeamMembers] = useState([]);
 
   const addTeamMember = () => {
-    if (formData.person.trim()) {
+    if (formData.person) {
       setTeamMembers([...teamMembers, formData.person]);
-      setFormData({ ...formData, person: '' });
+      setFormData({ ...formData, person: formData.person });
     }
   };
 
