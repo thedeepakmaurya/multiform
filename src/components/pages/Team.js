@@ -32,7 +32,7 @@ const Team = ({formData, setFormData, step, prevStep, handleSubmit, handleChange
          }
       </div>
       {/* Button */}
-      <div className='flex flex-col mt-[235px] sm:w-[380px] w-[480px] pl-10 pr-10'>
+      <div className='flex flex-col mt-[344px] w-full '>
         <div className='flex justify-start items-center  sm:gap-[35px] gap-[80px]'>
           <button className='text-sm' onClick={prevStep}><i className='bx bx-chevron-left'></i>Back</button>
           <button className='text-sm p-2 pl-6 pr-6 rounded-md bg-blue-500 text-white ml-2 ' onClick={handleSubmit}>Create Project</button>
