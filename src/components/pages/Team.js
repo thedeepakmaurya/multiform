@@ -10,10 +10,9 @@ const Team = ({formData, setFormData, step, prevStep, handleSubmit, handleChange
     }
   };
 
-  const removeTeamMember = () => {
-    setTeamMembers(teamMembers.filter((member) => member!== formData.person));
-    setFormData({...formData, person: formData.person });
-  }
+  const removeTeamMember = (indexToRemove) => {
+    setTeamMembers(teamMembers.filter((_, index) => index !== indexToRemove));
+  };
 
   return (
     <div className='flex flex-col items-center bg-white rounded-xl p-10 pb-[31px] shadow-lg shadow-gray-400 sm:w-[90%] w-[31%] h-[600px]'>
@@ -42,7 +41,7 @@ const Team = ({formData, setFormData, step, prevStep, handleSubmit, handleChange
           <div key={index} className='flex flex-col mb-2'>
             <div className='flex items-center justify-between'>
               <p className='text-sm font-semibold'>{member}</p>
-              <i className='bx bx-x' onClick={() => removeTeamMember()}></i>
+              <i className='bx bx-x align-middle cursor-pointer ' onClick={() => removeTeamMember(index)}></i>
             </div>
             <hr className='border-gray-300 mt-2' />
           </div>
