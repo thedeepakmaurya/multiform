@@ -18,7 +18,6 @@ const Form = () => {
   }
 
   const handleSubmit = () => {
-    console.log(formData)
     alert('Project created successfully')
     localStorage.setItem('formData', JSON.stringify(formData));
   }
