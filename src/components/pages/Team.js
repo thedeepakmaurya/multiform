@@ -20,9 +20,9 @@ const Team = ({formData, setFormData, step, prevStep, handleSubmit, handleChange
           <button className='text-sm h-9 pl-6 pr-6 rounded-md bg-blue-500 text-white ' onClick={AddTeamMember}>Add</button>
         </div>
       </div>
-      <div className='mt-5'>
+      <div className='mt-5 w-full '>
          {
-          teamMembers.map((member, index) => <div key={index} className='flex flex-col sm:w-[380px] w-[480px] pl-10 pr-10 mb-2'>
+          teamMembers.map((member, index) => <div key={index} className='flex flex-col  mb-2'>
                   <div className='flex items-center gap-[340px]'>
                   <p className='text-sm font-semibold'>{member}</p> 
                   <i className='bx bx-x'></i>
@@ -33,7 +33,7 @@ const Team = ({formData, setFormData, step, prevStep, handleSubmit, handleChange
       </div>
       {/* Button */}
       <div className='flex flex-col mt-[344px] w-full '>
-        <div className='flex justify-start items-center  sm:gap-[35px] gap-[80px]'>
+        <div className='flex justify-start items-center  sm:gap-[10%] gap-[15%]'>
           <button className='text-sm' onClick={prevStep}><i className='bx bx-chevron-left'></i>Back</button>
           <button className='text-sm p-2 pl-6 pr-6 rounded-md bg-blue-500 text-white ml-2 ' onClick={handleSubmit}>Create Project</button>
         </div>
