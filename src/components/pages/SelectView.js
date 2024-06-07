@@ -37,7 +37,7 @@ const SelectView = ({ formData, setFormData, step, nextStep, prevStep }) => {
           <p className='text-sm p-3'>Board</p>
         </div>
       </div>
-      <div className='mt-44'>
+      <div className='mt-44 w-full'>
         <Button nextStep={nextStep} prevStep={prevStep} step={step} />
       </div>
     </div>

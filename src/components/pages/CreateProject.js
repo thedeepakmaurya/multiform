@@ -85,7 +85,7 @@ const CreateProject = ({ formData, setFormData, step, nextStep, prevStep, handle
           </div>
         </div>
       </form>
-      <div className='mt-8'>
+      <div className='mt-8 w-full'>
         <Button step={step} nextStep={nextStep} prevStep={prevStep} />
       </div>
     </div>
