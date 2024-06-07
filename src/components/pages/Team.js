@@ -11,7 +11,7 @@ const Team = ({formData, setFormData, step, prevStep, handleSubmit, handleChange
   };
 
   return (
-    <div className='flex flex-col items-center bg-white rounded-xl p-10 shadow-lg shadow-gray-400 sm:w-[90%] w-[31%] h-[600px]'>
+    <div className='flex flex-col items-center bg-white rounded-xl p-10 pb-[31px] shadow-lg shadow-gray-400 sm:w-[90%] w-[31%] h-[600px]'>
       <h1 className='font-bold text-xl'>Team</h1>
       <div className='w-full'>
         <label className='text-md font-medium'>Invite or Add a person</label>
@@ -47,7 +47,7 @@ const Team = ({formData, setFormData, step, prevStep, handleSubmit, handleChange
       <div className='w-full'>
         <div className='flex justify-start items-center sm:gap-[10%] gap-[15%]'>
           <button className='text-sm' onClick={prevStep}>
-            <i className='bx bx-chevron-left'></i>Back
+            <i className='bx bx-chevron-left align-middle'></i>Back
           </button>
           <button
             className='text-sm p-2 pl-6 pr-6 rounded-md bg-blue-500 text-white ml-2'
